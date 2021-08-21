@@ -4,8 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import Pedido from './Pedido'
 import Cartao from './Cartao'
+import Feedback from './Feedback'
 
 const App = () => {
+    const textoOK = "Chegou"
+    const textoNOK = "Não chegou"
+    const funcaoOK = () => alert ("Obrigado pelo Feedback")
+    const funcaoNOK = () => alert ("Verificaremos o que houve")
+    const feedbackComponent = <Feedback textoOK={textoOK} textoNOK={textoNOK} funcaoOK={funcaoOK} funcaoNOK={funcaoNOK}/>
     return(
         <div className="container border rounded mt-2">
             <div className="row justify-content-center border-bottom m-2">
@@ -20,6 +26,12 @@ const App = () => {
                             titulo="SSD"
                             descricao="SSD Kingston"
                         />
+                        <Feedback
+                            textoOK={TextoOK}
+                            textoNOK={textoNOK}
+                            funcaoOK={funcaoOK}
+                            funcaoNOK={funcaoNOK}
+                        />
                     </Cartao>
                 </div>
             </div>
@@ -32,6 +44,12 @@ const App = () => {
                             titulo="Livro"
                             descricao="Nome do Vento"
                         />
+                        <Feedback
+                            textoOK={TextoOK}
+                            textoNOK={textoNOK}
+                            funcaoOK={funcaoOK}
+                            funcaoNOK={funcaoNOK}
+                        />
                     </Cartao>
                 </div>
             </div>
@@ -43,6 +61,12 @@ const App = () => {
                             icone="fas fa-laptop fa-2x"
                             titulo="Notebook Dell"
                             descricao="8GB de RAM, 500GB SSD, Ryzen 5"
+                        />
+                        <Feedback
+                            textoOK={TextoOK}
+                            textoNOK={textoNOK}
+                            funcaoOK={funcaoOK}
+                            funcaoNOK={funcaoNOK}
                         />
                     </Cartao>
                 </div>
